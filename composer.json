@@ -1,0 +1,27 @@
+{
+  "name": "pgrimaud/algolia-analytics-client-php",
+  "type": "library",
+  "description": "Algolia Analytics API Client for PHP",
+  "keywords": ["algolia", "algolia-analytics", "algolia-api", "search", "sdk"],
+  "homepage": "https://github.com/pgrimaud/algolia-analytics-client-php",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Pierre Grimaud",
+      "email": "grimaud.pierre@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Algolia\\": "src/Algolia/Analytics/"
+    }
+  },
+  "require": {
+    "guzzlehttp/guzzle": "^6.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^5.7",
+    "friendsofphp/php-cs-fixer": "^2.4",
+    "php-coveralls/php-coveralls": "^2.0"
+  }
+}

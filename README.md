@@ -1,0 +1,1 @@
+# algolia-analytics-client-php
