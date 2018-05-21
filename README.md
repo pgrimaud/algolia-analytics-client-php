@@ -4,9 +4,6 @@
 [![Packagist](https://img.shields.io/badge/packagist-install-brightgreen.svg)](https://packagist.org/packages/pgrimaud/algolia-analytics-client-php)
 [![Coverage Status](https://coveralls.io/repos/github/pgrimaud/algolia-analytics-client-php/badge.svg)](https://coveralls.io/github/pgrimaud/algolia-analytics-client-php)
 
-## Information
-This library offers 2 packages to retrieve your or any Instagram feed without oAuth for PHP.
-
 ## Installation
 
 ```

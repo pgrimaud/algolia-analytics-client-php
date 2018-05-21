@@ -15,8 +15,10 @@ class CountryTopResponse
      */
     public function __construct($data)
     {
-        foreach ($data->countries as $country) {
-            $this->results[] = new CountryResult($country);
+        if (isset($data->countries)) {
+            foreach ($data->countries as $country) {
+                $this->results[] = new CountryResult($country);
+            }
         }
     }
 
