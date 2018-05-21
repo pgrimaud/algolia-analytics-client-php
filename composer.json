@@ -2,7 +2,13 @@
   "name": "pgrimaud/algolia-analytics-client-php",
   "type": "library",
   "description": "Algolia Analytics API Client for PHP",
-  "keywords": ["algolia", "algolia-analytics", "algolia-api", "search", "sdk"],
+  "keywords": [
+    "algolia",
+    "algolia-analytics",
+    "algolia-api",
+    "search",
+    "sdk"
+  ],
   "homepage": "https://github.com/pgrimaud/algolia-analytics-client-php",
   "license": "MIT",
   "authors": [
@@ -17,6 +23,7 @@
     }
   },
   "require": {
+    "php": "^7.0",
     "guzzlehttp/guzzle": "^6.3"
   },
   "require-dev": {

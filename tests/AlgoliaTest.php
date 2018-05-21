@@ -46,7 +46,7 @@ class AlgoliaTest extends \PHPUnit_Framework_TestCase
         $handler             = HandlerStack::create($mock);
         $this->invalidClient = new Client(['handler' => $handler]);
 
-        $response                    = new Response(411, [], json_encode(['status' => 411, 'message' => 'Error']));
+        $response                    = new Response(411, []);
         $mock                        = new MockHandler([$response]);
         $handler                     = HandlerStack::create($mock);
         $this->invalidAndEmptyClient = new Client(['handler' => $handler]);
