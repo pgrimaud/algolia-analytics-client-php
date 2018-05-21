@@ -1,0 +1,12 @@
+{
+  "countries": [
+    {
+      "country": "US",
+      "count": 2
+    },
+    {
+      "country": "UK",
+      "count": 1
+    }
+  ]
+}

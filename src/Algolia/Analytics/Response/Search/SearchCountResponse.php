@@ -7,6 +7,11 @@ use Algolia\Response\AbstractCountResponse;
 class SearchCountResponse extends AbstractCountResponse
 {
     /**
+     * @var array
+     */
+    protected $dates;
+
+    /**
      * SearchCountResponse constructor.
      * @param $data
      */
@@ -16,5 +21,13 @@ class SearchCountResponse extends AbstractCountResponse
         foreach ($data->dates as $date) {
             $this->dates[] = new SearchDateResponse($date);
         }
+    }
+
+    /**
+     * @return array
+     */
+    public function getDates()
+    {
+        return $this->dates;
     }
 }

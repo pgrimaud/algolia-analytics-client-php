@@ -19,4 +19,12 @@ class CountryTopResponse
             $this->results[] = new CountryResult($country);
         }
     }
+
+    /**
+     * @return array
+     */
+    public function getResults()
+    {
+        return $this->results;
+    }
 }

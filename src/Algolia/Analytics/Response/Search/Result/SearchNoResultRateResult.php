@@ -1,15 +1,13 @@
 <?php
 
-namespace Algolia\Response\Search;
+namespace Algolia\Response\Search\Result;
 
-use Algolia\Response\Search\Result\SearchNoResultRateResult;
-
-class SearchNoResultRateResponse
+class SearchNoResultRateResult
 {
     /**
-     * @var array
+     * @var \DateTime $date
      */
-    private $results = [];
+    private $date;
 
     /**
      * @var float
@@ -27,26 +25,23 @@ class SearchNoResultRateResponse
     private $noResultCount;
 
     /**
-     * SearchNoResultRateResponse constructor.
+     * SearchNoResultRateResult constructor.
      * @param $data
      */
     public function __construct($data)
     {
+        $this->date          = new \DateTime($data->date);
         $this->rate          = $data->rate;
         $this->count         = $data->count;
         $this->noResultCount = $data->noResultCount;
-
-        foreach ($data->dates as $search) {
-            $this->results[] = new SearchNoResultRateResult($search);
-        }
     }
 
     /**
-     * @return array
+     * @return \DateTime
      */
-    public function getResults()
+    public function getDate()
     {
-        return $this->results;
+        return $this->date;
     }
 
     /**

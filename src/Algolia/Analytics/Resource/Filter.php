@@ -87,8 +87,7 @@ class Filter extends AbstractResource
         \DateTime $startDate = null,
         \DateTime $endDate = null,
         $search = null
-    )
-    {
+    ) {
         $endpoint = 'filters/' . implode($attributes, ',') . '?index=' . $index;
         $endpoint = $this->manageDates($endpoint, $startDate, $endDate);
 

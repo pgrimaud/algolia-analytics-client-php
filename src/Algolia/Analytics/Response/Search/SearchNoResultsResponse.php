@@ -21,4 +21,12 @@ class SearchNoResultsResponse
             $this->results[] = new SearchNoResultsResult($search);
         }
     }
+
+    /**
+     * @return array
+     */
+    public function getResults()
+    {
+        return $this->results;
+    }
 }

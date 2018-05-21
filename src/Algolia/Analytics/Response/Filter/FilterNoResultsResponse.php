@@ -2,6 +2,8 @@
 
 namespace Algolia\Response\Filter;
 
+use Algolia\Response\Filter\Result\FilterNoResultResult;
+
 class FilterNoResultsResponse
 {
     /**
@@ -17,8 +19,16 @@ class FilterNoResultsResponse
     {
         if (is_array($data->values)) {
             foreach ($data->values as $filter) {
-                $this->results[] = new FilterResult($filter);
+                $this->results[] = new FilterNoResultResult($filter);
             }
         }
+    }
+
+    /**
+     * @return array
+     */
+    public function getResults()
+    {
+        return $this->results;
     }
 }

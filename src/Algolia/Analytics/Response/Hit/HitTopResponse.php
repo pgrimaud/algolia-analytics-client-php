@@ -16,7 +16,15 @@ class HitTopResponse
     public function __construct($data)
     {
         foreach ($data->hits as $hit) {
-            $this->results[] = new FilterResult($hit);
+            $this->results[] = new HitResult($hit);
         }
+    }
+
+    /**
+     * @return array
+     */
+    public function getResults()
+    {
+        return $this->results;
     }
 }

@@ -21,4 +21,12 @@ class SearchTopResponse
             $this->results[] = new SearchResult($search);
         }
     }
+
+    /**
+     * @return array
+     */
+    public function getResults()
+    {
+        return $this->results;
+    }
 }

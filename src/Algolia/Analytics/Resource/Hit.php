@@ -2,7 +2,7 @@
 
 namespace Algolia\Resource;
 
-use Algolia\Response\Hit\FilterTopResponse;
+use Algolia\Response\Hit\HitTopResponse;
 
 class Hit extends AbstractResource
 {
@@ -10,7 +10,7 @@ class Hit extends AbstractResource
      * @param                $index
      * @param \DateTime|null $startDate
      * @param \DateTime|null $endDate
-     * @return FilterTopResponse
+     * @return HitTopResponse
      * @throws \Algolia\Transport\Exception\ClientException
      */
     public function top($index, \DateTime $startDate = null, \DateTime $endDate = null)
@@ -21,7 +21,7 @@ class Hit extends AbstractResource
         $endpoint = $this->generateEndpoint($endpoint);
         $response = $this->client->request($endpoint);
 
-        return new FilterTopResponse($response);
+        return new HitTopResponse($response);
     }
 
     /**
@@ -29,7 +29,7 @@ class Hit extends AbstractResource
      * @param \DateTime|null $startDate
      * @param \DateTime|null $endDate
      * @param null           $search
-     * @return FilterTopResponse
+     * @return HitTopResponse
      * @throws \Algolia\Transport\Exception\ClientException
      */
     public function search($index, \DateTime $startDate = null, \DateTime $endDate = null, $search = null)
@@ -44,6 +44,6 @@ class Hit extends AbstractResource
         $endpoint = $this->generateEndpoint($endpoint);
         $response = $this->client->request($endpoint);
 
-        return new FilterTopResponse($response);
+        return new HitTopResponse($response);
     }
 }

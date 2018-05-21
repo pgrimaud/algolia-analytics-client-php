@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "attribute": "brand",
+      "operator": ":",
+      "value": "apple",
+      "count": 2
+    },
+    {
+      "attribute": "_tags",
+      "operator": ":",
+      "value": "comment",
+      "count": 1
+    }
+  ]
+}

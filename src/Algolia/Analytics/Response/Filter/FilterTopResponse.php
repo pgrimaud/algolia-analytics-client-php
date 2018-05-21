@@ -2,6 +2,8 @@
 
 namespace Algolia\Response\Filter;
 
+use Algolia\Response\Filter\Result\FilterTopResult;
+
 class FilterTopResponse
 {
     /**
@@ -17,8 +19,16 @@ class FilterTopResponse
     {
         if (is_array($data->attributes)) {
             foreach ($data->attributes as $filter) {
-                $this->results[] = new FilterResult($filter);
+                $this->results[] = new FilterTopResult($filter);
             }
         }
+    }
+
+    /**
+     * @return array
+     */
+    public function getResults()
+    {
+        return $this->results;
     }
 }

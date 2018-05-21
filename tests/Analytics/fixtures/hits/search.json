@@ -1,0 +1,12 @@
+{
+  "hits": [
+    {
+      "hit": "hit1",
+      "count": 2
+    },
+    {
+      "hit": "hit0",
+      "count": 1
+    }
+  ]
+}

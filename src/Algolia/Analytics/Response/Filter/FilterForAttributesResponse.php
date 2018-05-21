@@ -2,6 +2,8 @@
 
 namespace Algolia\Response\Filter;
 
+use Algolia\Response\Filter\Result\FilterForAttributesResult;
+
 class FilterForAttributesResponse
 {
     /**
@@ -17,8 +19,16 @@ class FilterForAttributesResponse
     {
         if (is_array($data->values)) {
             foreach ($data->values as $filter) {
-                $this->results[] = new FilterResult($filter);
+                $this->results[] = new FilterForAttributesResult($filter);
             }
         }
+    }
+
+    /**
+     * @return array
+     */
+    public function getResults()
+    {
+        return $this->results;
     }
 }

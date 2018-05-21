@@ -1,0 +1,25 @@
+{
+  "rate": 0.42857142857142855,
+  "count": 14,
+  "noResultCount": 6,
+  "dates": [
+    {
+      "date": "2017-01-01",
+      "rate": 0.5,
+      "count": 10,
+      "noResultCount": 5
+    },
+    {
+      "date": "2017-01-02",
+      "rate": 0,
+      "count": 0,
+      "noResultCount": 0
+    },
+    {
+      "date": "2017-01-03",
+      "rate": 0.25,
+      "count": 4,
+      "noResultCount": 1
+    }
+  ]
+}

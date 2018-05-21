@@ -1,0 +1,14 @@
+{
+  "searches": [
+    {
+      "search": "q1",
+      "count": 2,
+      "nbHits": 1
+    },
+    {
+      "search": "q0",
+      "count": 1,
+      "nbHits": 1
+    }
+  ]
+}
