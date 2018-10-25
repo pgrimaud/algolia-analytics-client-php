@@ -17,8 +17,10 @@ class SearchNoResultsResponse
      */
     public function __construct($data)
     {
-        foreach ($data->searches as $search) {
-            $this->results[] = new SearchNoResultsResult($search);
+        if (!empty($data->searches)) {
+            foreach ($data->searches as $search) {
+                $this->results[] = new SearchNoResultsResult($search);
+            }
         }
     }
 

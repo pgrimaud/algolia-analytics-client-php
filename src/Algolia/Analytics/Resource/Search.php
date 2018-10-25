@@ -45,7 +45,11 @@ class Search extends AbstractResource
         $orderBy = null,
         $direction = null
     ) {
-        $endpoint = 'searches?index=' . $index . '&clickAnalytics=' . $clickAnalytics;
+        $endpoint = 'searches?index=' . $index;
+        if ($clickAnalytics) {
+            $endpoint .= '&clickAnalytics=true';
+        }
+
         $endpoint = $this->manageDates($endpoint, $startDate, $endDate);
 
         if ($orderBy) {

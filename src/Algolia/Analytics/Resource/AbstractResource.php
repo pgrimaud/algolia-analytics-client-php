@@ -47,7 +47,7 @@ abstract class AbstractResource
     protected function manageDates($endpoint, $startDate, $endDate)
     {
         if ($startDate instanceof \DateTime) {
-            $endpoint .= '&starDate=' . $startDate->format('Y-m-d');
+            $endpoint .= '&startDate=' . $startDate->format('Y-m-d');
         }
 
         if ($endDate instanceof \DateTime) {
