@@ -17,8 +17,10 @@ class SearchTopResponse
      */
     public function __construct($data)
     {
-        foreach ($data->searches as $search) {
-            $this->results[] = new SearchResult($search);
+        if (!empty($data->searches)) {
+            foreach ($data->searches as $search) {
+                $this->results[] = new SearchResult($search);
+            }
         }
     }
 
